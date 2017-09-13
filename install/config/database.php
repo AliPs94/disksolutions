@@ -35,12 +35,12 @@
 */
 
 // The following values will probably need to be changed.
-$db['default']['username'] = "zarpos";
-$db['default']['password'] = "ali12345^";
-$db['default']['database'] = "zarpos";
+$db['default']['username'] = "%USERNAME%";
+$db['default']['password'] = "%PASSWORD%";
+$db['default']['database'] = "%DATABASE%";
 
 // The following values can probably stay the same.
-$db['default']['hostname'] = "zarpos.database.windows.net";
+$db['default']['hostname'] = "%HOSTNAME%";
 $db['default']['dbdriver'] = "mysql"; //Updated to latest driver.
 $db['default']['dbprefix'] = "";
 $db['default']['pconnect'] = TRUE;
