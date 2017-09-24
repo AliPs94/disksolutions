@@ -123,37 +123,6 @@
          <div id="productList">
             <!-- product List goes here  -->
          </div>
-         <div class="footer-section">
-            <div class="table-responsive col-sm-12 totalTab">
-               <table class="table">
-                  <tr>
-                     <td class="active" width="40%"><?=label("SubTotal");?></td>
-                     <td class="whiteBg" width="60%"><span id="Subtot"></span> <?=$this->setting->currency?>
-                        <span class="float-right"><b id="ItemsNum"><span></span> <?=label("item");?></b></span>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td class="active"><?=label("OrderTAX");?></td>
-                     <td class="whiteBg"><input type="text" value="<?=$this->setting->tax;?>" onchange="total_change()" id="<?=strval($this->setting->keyboard) === '1' ? 'num01' : ''?>" class="total-input TAX" placeholder="N/A"  maxlength="5">
-                        <span class="float-right"><b id="taxValue"></b></span>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td class="active"><?=label("Discount");?></td>
-                     <td class="whiteBg"><input type="text" value="<?=$this->setting->discount;?>" onchange="total_change()" id="<?=strval($this->setting->keyboard) === '1' ? 'num02' : ''?>" class="total-input Remise" placeholder="N/A"  maxlength="5">
-                        <span class="float-right"><b id="RemiseValue"></b></span>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td class="active"><?=label("Total");?></td>
-                     <td class="whiteBg light-blue text-bold"><span id="total"></span> <?=$this->setting->currency?></td>
-                  </tr>
-               </table>
-            </div>
-            <button type="button" onclick="cancelPOS()" class="btn btn-red col-md-6 flat-box-btn"><h5 class="text-bold"><?=label('CANCEL');?></h5></button>
-            <button type="button" class="btn btn-green col-md-6 flat-box-btn" data-toggle="modal" data-target="#AddSale"><h5 class="text-bold"><?=label('PAYEMENT');?></h5></button>
-         </div>
-
       </div>
       <div class="col-md-7 right-side nopadding">
          <div class="row row-horizon">
@@ -203,6 +172,32 @@
                </div>
                <?php } ?>
             <?php endforeach;?>
+         </div>
+         <div class="footer-section">
+            <div class="table-responsive col-sm-12 totalTab">
+               <table class="table">
+                  <tr>
+                     <td class="active" width="20%"><?=label("SubTotal");?></td>
+                     <td class="whiteBg" width="30%"><span id="Subtot"></span> <?=$this->setting->currency?>
+                        <span class="float-right"><b id="ItemsNum"><span></span> <?=label("item");?></b></span>
+                     </td>
+                     <td class="active" width="20%"><?=label("OrderTAX");?></td>
+                     <td class="whiteBg" width="30%"><input type="text" value="<?=$this->setting->tax;?>" onchange="total_change()" id="<?=strval($this->setting->keyboard) === '1' ? 'num01' : ''?>" class="total-input TAX" placeholder="N/A"  maxlength="5">
+                        <span class="float-right"><b id="taxValue"></b></span>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="active"><?=label("Discount");?></td>
+                     <td class="whiteBg"><input type="text" value="<?=$this->setting->discount;?>" onchange="total_change()" id="<?=strval($this->setting->keyboard) === '1' ? 'num02' : ''?>" class="total-input Remise" placeholder="N/A"  maxlength="5">
+                        <span class="float-right"><b id="RemiseValue"></b></span>
+                     </td>
+                     <td class="active"><?=label("Total");?></td>
+                     <td class="whiteBg light-blue text-bold"><span id="total"></span> <?=$this->setting->currency?></td>
+                  </tr>
+               </table>
+            </div>
+            <button type="button" onclick="cancelPOS()" class="btn btn-red col-md-6 flat-box-btn"><h5 class="text-bold"><?=label('CANCEL');?></h5></button>
+            <button type="button" class="btn btn-green col-md-6 flat-box-btn" data-toggle="modal" data-target="#AddSale"><h5 class="text-bold"><?=label('PAYEMENT');?></h5></button>
          </div>
       </div>
    </div>
@@ -587,7 +582,7 @@ function edit_posale(id)
 
 }
 
-
+$("#customerSelect").find('.select2-container').css({width: '100%'});
 $("#customerSelect").change(function(){
 
   var id = $(this).find('option:selected').val();
