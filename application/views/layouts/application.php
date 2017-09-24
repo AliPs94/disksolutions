@@ -52,7 +52,7 @@
    </head>
    <body>
       <!-- Navigation -->
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <nav class="navbar navbar-collapse-lg navbar-default navbar-fixed-top" role="navigation">
          <div class="container-fluid">
             <div class="navbar-header">
                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
