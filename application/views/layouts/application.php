@@ -41,6 +41,7 @@
       <!-- datepicker css -->
       <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/css/bootstrap-datepicker.min.css">
       <!-- Custom CSS -->
+      <link href="<?=base_url()?>assets/css/style.css" rel="stylesheet">
       <link href="<?=base_url()?>assets/css/Style-<?=$this->setting->theme?>.css" rel="stylesheet">
       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,7 +52,7 @@
    </head>
    <body>
       <!-- Navigation -->
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <nav class="navbar navbar-collapse-lg navbar-default navbar-fixed-top" role="navigation">
          <div class="container-fluid">
             <div class="navbar-header">
                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">

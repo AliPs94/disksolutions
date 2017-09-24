@@ -92,7 +92,7 @@ $(function(){
 // and the right side
 $(function(){
    $('#productList2').slimScroll({
-      height: '740px',
+      height: '355px',
       allowPageScroll: true,
       alwaysVisible: true,
       railVisible: true,
