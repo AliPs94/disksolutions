@@ -38,7 +38,7 @@
 $db['default']['username'] = "zarpos";
 $db['default']['password'] = "123123#qweqweE";
 $db['default']['database'] = "zarpos";
-
+//dummy change
 // The following values can probably stay the same.
 $db['default']['hostname'] = "localhost";
 $db['default']['dbdriver'] = "mysql"; //Updated to latest driver.
