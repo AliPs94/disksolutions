@@ -19,3 +19,5 @@ application/logs/*
 
 #added by us, the developers
 .htaccess
+application/config/config.php
+application/config/database.php
