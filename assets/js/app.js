@@ -75,6 +75,11 @@ function setSize() {
       $('.barcode').attr('id', 'num02');
     }
   }
+
+  $('#productList, #productList2')
+    .css({height: ($(document).height() - 360) + 'px'})
+    .closest('.slimScrollDiv')
+    .css({height: ($(document).height() - 360) + 'px'});
 }
 
 setSize();
@@ -84,7 +89,7 @@ $(window).on('resize', setSize);
 //for the product list in the left side
 $(function(){
    $('#productList').slimScroll({
-      height: '355px',
+      height: ($(document).height() - 360) + 'px',
       alwaysVisible: true,
       railVisible: true,
    });
@@ -92,7 +97,7 @@ $(function(){
 // and the right side
 $(function(){
    $('#productList2').slimScroll({
-      height: '355px',
+      height: ($(document).height() - 360) + 'px',
       allowPageScroll: true,
       alwaysVisible: true,
       railVisible: true,
