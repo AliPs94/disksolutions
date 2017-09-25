@@ -39,3 +39,7 @@
 .totalTab input {
     width: 50%;
 }
+
+#pos-left-side {
+  margin-bottom: 0;
+}

@@ -68,7 +68,7 @@
       	<li data-toggle="tooltip"  data-html="true" data-placement="left" title="<?=label('CloseRegister');?>"><a href="javascript:void(0)" onclick="CloseRegister()"><i class="fa fa-times" aria-hidden="true"></i></a></li>
       	<li data-toggle="tooltip"  data-html="true" data-placement="left" title="<?=label('SwitchStore');?>"><a href="pos/switshregister"><i class="fa fa-random" aria-hidden="true"></i></a></li>
       </ul>
-      <div class="col-md-5 left-side">
+      <div class="col-md-5 left-side" id="pos-left-side">
          <div class="row">
             <div class="row row-horizon">
                <span class="holdList">
