@@ -145,33 +145,37 @@
               </div>
               <!-- product list section -->
          <div id="productList2">
-            <?php foreach ($products as $product):?>
-               <?php $cheked = true;
-               $invis = $product->h_stores;
-               $invis = trim($invis, ",");
-               $array = explode(',', $invis); //split string into array seperated by ', '
-               foreach($array as $value) //loop over values
-               {
-                  $cheked = $value == $this->store ? false : $cheked;
-               }
-               if($cheked) {?>
-               <div class="col-sm-2 col-xs-4">
-                     <a href="javascript:void(0)" class="addPct" id="product-<?=$product->code;?>" onclick="add_posale('<?=$product->id;?>')">
-                        <div class="product <?=$product->color;?> flat-box">
-                           <h3 id="proname"><?=$product->name;?></h3>
-                           <input type="hidden" id="idname-<?=$product->id;?>" name="name" value="<?=$product->name;?>" />
-                           <input type="hidden" id="idprice-<?=$product->id;?>" name="price" value="<?=$product->price;?>" />
-                           <input type="hidden" id="category" name="category" value="<?=$product->category;?>" />
-                           <div class="mask">
-                              <h3><?=number_format((float)$product->price, $this->setting->decimals, '.', '');?> <?=$this->setting->currency;?></h3>
-                              <p><?=character_limiter($product->description, 40);?></p>
-                           </div>
-                           <?php if($product->photo){ ?><img src="<?=base_url()?>files/products/<?=$product->photothumb;?>" alt="<?=$product->name;?>"><?php } ?>
-                        </div>
-                     </a>
-               </div>
-               <?php } ?>
-            <?php endforeach;?>
+           <?php
+           for($i = 0; $i < 12; $i++) {
+             foreach ($products as $product):
+                $cheked = true;
+                $invis = $product->h_stores;
+                $invis = trim($invis, ",");
+                $array = explode(',', $invis); //split string into array seperated by ', '
+                foreach($array as $value) //loop over values
+                {
+                   $cheked = $value == $this->store ? false : $cheked;
+                }
+                if($cheked) {?>
+                <div class="product-wrapper">
+                      <a href="javascript:void(0)" class="addPct" id="product-<?=$product->code;?>" onclick="add_posale('<?=$product->id;?>')">
+                         <div class="product <?=$product->color;?> flat-box">
+                            <h3 id="proname"><?=$product->name;?></h3>
+                            <input type="hidden" id="idname-<?=$product->id;?>" name="name" value="<?=$product->name;?>" />
+                            <input type="hidden" id="idprice-<?=$product->id;?>" name="price" value="<?=$product->price;?>" />
+                            <input type="hidden" id="category" name="category" value="<?=$product->category;?>" />
+                            <div class="mask">
+                               <h3><?=number_format((float)$product->price, $this->setting->decimals, '.', '');?> <?=$this->setting->currency;?></h3>
+                               <p><?=character_limiter($product->description, 40);?></p>
+                            </div>
+                            <?php if($product->photo){ ?><img src="<?=base_url()?>files/products/<?=$product->photothumb;?>" alt="<?=$product->name;?>"><?php } ?>
+                         </div>
+                      </a>
+                </div>
+                <?php }
+             endforeach;
+           }
+            ?>
          </div>
          <div class="footer-section">
             <div class="table-responsive col-sm-12 totalTab">
