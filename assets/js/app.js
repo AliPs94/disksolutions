@@ -81,9 +81,9 @@ function setSize() {
 
   function updateProductListHeight(selector, heightConstant) {
     $(selector)
-      .css({height: ($(document).height() - heightConstant) + 'px'})
+      .css({height: (window.innerHeight - heightConstant) + 'px'})
       .closest('.slimScrollDiv')
-      .css({height: ($(document).height() - heightConstant) + 'px'});
+      .css({height: (window.innerHeight - heightConstant) + 'px'});
   }
 }
 
@@ -94,7 +94,7 @@ $(window).on('resize', setSize);
 //for the product list in the left side
 $(function(){
    $('#productList').slimScroll({
-      height: ($(document).height() - 380) + 'px',
+      height: (window.innerHeight - 380) + 'px',
       alwaysVisible: true,
       railVisible: true,
    });
@@ -102,7 +102,7 @@ $(function(){
 // and the right side
 $(function(){
    $('#productList2').slimScroll({
-      height: ($(document).height() - 380.5) + 'px',
+      height: (window.innerHeight - 380.5) + 'px',
       allowPageScroll: true,
       alwaysVisible: true,
       railVisible: true,
