@@ -89,3 +89,11 @@
 #productList2 {
   padding: 12px 0 0 12px;
 }
+
+#customerSelect {
+  width: 100%;
+}
+
+#customerSelect + .select2 {
+  width: 100% !important;/*To assure that #customerSelect width is updated on resized*/
+}

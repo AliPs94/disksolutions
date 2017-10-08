@@ -586,7 +586,6 @@ function edit_posale(id)
 
 }
 
-$("#customerSelect").find('.select2-container').css({width: '100%'});
 $("#customerSelect").change(function(){
 
   var id = $(this).find('option:selected').val();
